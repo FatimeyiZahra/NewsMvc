@@ -1,0 +1,570 @@
+#navbar {
+    .navbar {
+        position: fixed;
+        box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+        width: 100%;
+        z-index: 99;
+        padding: 0;
+        .navbar-brand {
+            .logo-black {
+                //there are 2 navbar brand picture, one of them is display block
+                display: none;
+            }
+            img {
+                position: relative;
+                z-index: 1;
+                left: 62px;
+            }
+            &::after {
+                //for image background color
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 79px;
+                width: 12em;
+                background-color: $blueColor;
+            }
+        }
+
+        .navbar-collapse {
+            margin-right: 60px;
+            .navbar-nav {
+                li {
+                    list-style: none;
+                }
+                .nav-item {
+                    padding: 30px 15px;
+                    .nav-link {
+                        padding: 0;
+                        font-weight: 800;
+                        font-size: 13px;
+                        color: #333333;
+                        display: block;
+                        transition: all 0.35s ease-in-out;
+                        letter-spacing: 0.06em;
+                        text-transform: uppercase;
+                    }
+                    &.active,
+                    &:hover {
+                        .nav-link {
+                            color: $blueColor;
+                        }
+                    }
+                }
+              
+            }
+            .nav-icons {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background: #e7e7e7 none repeat scroll 0 0;
+                    top: 50%;
+                    left: 0;
+                    height: 30px;
+                    width: 1px;
+                    margin-top: -15px;
+                }
+                ul {
+                    display: flex;
+                    margin-top: 17px;
+
+                    .nav-item {
+                        .dropdown-toggle {
+                            // padding-top: 12px;
+                            &::after {
+                                display: none;
+                            }
+                        }
+                        &:hover {
+                            .dropdown-menu {
+                                display: block;
+                                visibility: visible;
+                                opacity: 1;
+                                -webkit-transform: translateY(0px);
+                                transform: translateY(0px);
+                                -webkit-transition: 0.5s ease all;
+                                transition: 0.5s ease all;
+                            }
+                        }
+
+                        .nav-link {
+                            padding-right: 0.5rem;
+                            padding-left: 0.5rem;
+                            .badge {
+                                position: absolute;
+                                border-radius: 50px;
+                                min-width: 15px;
+                                height: 15px;
+                                font-size: 9px;
+                                padding: 0px;
+                                right: 1px;
+                                line-height: 15px;
+                                top: 9px;
+                            }
+                            .img-profile {
+                                width: 30px;
+                                height: 30px;
+                            }
+                            .fa-bell {
+                                padding-top: 10px;
+                                color: $grayColor;
+                                #login {
+                                    .sb-topnav {
+                                        // position: fixed;
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        top: 0;
+                                        right: 0;
+                                        left: 0;
+                                        z-index: 1030;
+                                        height: 39px;
+                                        padding-bottom: 8px;
+                                        background: #e8e8e8;
+                                        border: none;
+                                        .navbar-nav {
+                                            list-style: none;
+                                            .nav-item {
+                                                .dropdown-toggle {
+                                                    // padding-top: 12px;
+                                                    &::after {
+                                                        display: none;
+                                                    }
+                                                }
+                                                &:hover {
+                                                    .dropdown-menu {
+                                                        display: block;
+                                                        visibility: visible;
+                                                        opacity: 1;
+                                                        -webkit-transform: translateY(0px);
+                                                        transform: translateY(0px);
+                                                        -webkit-transition: 0.5s ease all;
+                                                        transition: 0.5s ease all;
+                                                    }
+                                                }
+
+                                                .nav-link {
+                                                    padding-right: 0.5rem;
+                                                    padding-left: 0.5rem;
+                                                    .badge {
+                                                        position: absolute;
+                                                        border-radius: 50px;
+                                                        min-width: 15px;
+                                                        height: 15px;
+                                                        font-size: 9px;
+                                                        padding: 0px;
+                                                        right: 1px;
+                                                        line-height: 15px;
+                                                        top: 9px;
+                                                    }
+                                                    .img-profile {
+                                                        width: 30px;
+                                                        height: 30px;
+                                                    }
+                                                    .fa-bell {
+                                                        padding-top: 10px;
+                                                    }
+                                                }
+                                                .dropdown-list {
+                                                    padding: 0;
+                                                    border: none;
+                                                    overflow: hidden;
+                                                    width: 20rem !important;
+                                                    .dropdown-item {
+                                                        white-space: normal;
+                                                        padding-top: 0.5rem;
+                                                        padding-bottom: 0.5rem;
+                                                        border-left: 1px solid #e2e2e2;
+                                                        border-right: 1px solid #e2e2e2;
+                                                        border-bottom: 1px solid #e2e2e2;
+                                                        line-height: 1.3rem;
+                                                    }
+                                                    .dropdown-header {
+                                                        background-color: #131313;
+                                                        border: 1px solid #353535;
+                                                        color: #fff;
+                                                        font-weight: 800;
+                                                        font-size: 14px;
+                                                        padding: 0.8rem 1rem;
+                                                    }
+                                                    .icon-circle {
+                                                        height: 2.5rem;
+                                                        width: 2.5rem;
+                                                        border-radius: 100%;
+                                                        display: -webkit-box;
+                                                        display: -ms-flexbox;
+                                                        display: flex;
+                                                        -webkit-box-align: center;
+                                                        -ms-flex-align: center;
+                                                        align-items: center;
+                                                        -webkit-box-pack: center;
+                                                        -ms-flex-pack: center;
+                                                        justify-content: center;
+                                                    }
+                                                }
+                                                .dropdown-menu {
+                                                    padding: 0;
+                                                    border: none;
+                                                    overflow: hidden;
+                                                    width: 20rem !important;
+                                                    display: none;
+                                                    background: #ffffff;
+                                                    border-radius: 0px;
+                                                    margin: 0;
+                                                    -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1) !important;
+                                                    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1) !important;
+                                                    display: block;
+                                                    visibility: hidden;
+                                                    opacity: 0;
+                                                    -webkit-transform: translateY(50px);
+                                                    transform: translateY(50px);
+                                                    -webkit-transition: 0.5s ease all;
+                                                    transition: 0.5s ease all;
+
+                                                    .dropdown-header {
+                                                        background-color: #131313;
+                                                        border: 1px solid #353535;
+                                                        color: #fff;
+                                                        font-weight: 800;
+                                                        font-size: 14px;
+                                                        padding: 0.8rem 1rem;
+                                                    }
+                                                    .dropdown-item {
+                                                        padding: 6px 1rem;
+                                                        font-size: 0.85rem;
+                                                        white-space: normal;
+                                                        padding-top: 0.5rem;
+                                                        padding-bottom: 0.5rem;
+                                                        border-left: 1px solid #e2e2e2;
+                                                        border-right: 1px solid #e2e2e2;
+                                                        border-bottom: 1px solid #e2e2e2;
+                                                        line-height: 1.3rem;
+                                                        font-weight: 400;
+                                                        color: #212529;
+                                                        .icon-circle {
+                                                            height: 2.5rem;
+                                                            width: 2.5rem;
+                                                            border-radius: 100%;
+                                                            display: -webkit-box;
+                                                            display: -ms-flexbox;
+                                                            display: flex;
+                                                            -webkit-box-align: center;
+                                                            -ms-flex-align: center;
+                                                            align-items: center;
+                                                            -webkit-box-pack: center;
+                                                            -ms-flex-pack: center;
+                                                            justify-content: center;
+                                                        }
+                                                        .text-gray-500 {
+                                                            color: #b7b9cc !important;
+                                                        }
+                                                    }
+                                                    .dropdown-list-image {
+                                                        position: relative;
+                                                        height: 2.5rem;
+                                                        width: 2.5rem;
+                                                        img {
+                                                            height: 2.5rem;
+                                                            width: 2.5rem;
+                                                        }
+                                                        .status-indicator {
+                                                            background-color: #eaecf4;
+                                                            height: 0.75rem;
+                                                            width: 0.75rem;
+                                                            border-radius: 100%;
+                                                            position: absolute;
+                                                            bottom: 0;
+                                                            right: 0;
+                                                            border: 0.125rem solid #fff;
+                                                        }
+                                                    }
+                                                    &.show {
+                                                        display: block;
+                                                        visibility: visible;
+                                                        opacity: 1;
+                                                        -webkit-transform: translateY(0px);
+                                                        transform: translateY(0px);
+                                                        -webkit-transition: 0.5s ease all;
+                                                        transition: 0.5s ease all;
+                                                    }
+                                                    .font-weight-bold {
+                                                        .text-gray-500 {
+                                                            color: #b7b9cc !important;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .dropdown-menu {
+                            padding: 0;
+                            border: none;
+                            overflow: hidden;
+                            width: 20rem ;
+                            display: none;
+                            background: #ffffff;
+                            min-width: 10rem;
+                            border-radius: 0px;
+                            margin: 0;
+                            -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1) !important;
+                            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1) !important;
+                            display: block;
+                            visibility: hidden;
+                            opacity: 0;
+                            -webkit-transform: translateY(50px);
+                            transform: translateY(50px);
+                            -webkit-transition: 0.5s ease all;
+                            transition: 0.5s ease all;
+
+                            .dropdown-header {
+                                background-color: #131313;
+                                border: 1px solid #353535;
+                                color: #fff;
+                                font-weight: 800;
+                                font-size: 14px;
+                                padding: 0.8rem 1rem;
+                            }
+                            .dropdown-item {
+                                padding: 6px 1rem;
+                                font-size: 0.85rem;
+                                white-space: normal;
+                                padding-top: 0.5rem;
+                                padding-bottom: 0.5rem;
+                                border-left: 1px solid #e2e2e2;
+                                border-right: 1px solid #e2e2e2;
+                                border-bottom: 1px solid #e2e2e2;
+                                line-height: 1.3rem;
+                                font-weight: 400;
+                                color: #212529;
+                                .icon-circle {
+                                    height: 2.5rem;
+                                    width: 2.5rem;
+                                    border-radius: 100%;
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    justify-content: center;
+                                }
+                                .text-gray-500 {
+                                    color: #b7b9cc !important;
+                                }
+                            }
+                            .dropdown-list-image {
+                                position: relative;
+                                height: 2.5rem;
+                                width: 2.5rem;
+                                img {
+                                    height: 2.5rem;
+                                    width: 2.5rem;
+                                }
+                                .status-indicator {
+                                    background-color: #eaecf4;
+                                    height: 0.75rem;
+                                    width: 0.75rem;
+                                    border-radius: 100%;
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                    border: 0.125rem solid #fff;
+                                }
+                            }
+                            &.show {
+                                display: block;
+                                visibility: visible;
+                                opacity: 1;
+                                -webkit-transform: translateY(0px);
+                                transform: translateY(0px);
+                                -webkit-transition: 0.5s ease all;
+                                transition: 0.5s ease all;
+                            }
+                            .font-weight-bold {
+                                .text-gray-500 {
+                                    color: #b7b9cc !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .top-search {
+                position: absolute;
+                height: 50px;
+                top: 90px;
+                right: 67px;
+                border: medium none;
+                border-radius: 30px;
+                box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.5);
+                display: none;
+                background-color: $whiteColor;
+                z-index: 99;
+                border: 1px solid #e7e7e7;
+                .form-control {
+                    background-color: transparent;
+                    border: medium none !important;
+                    box-shadow: inherit;
+                    color: #1c1c1c;
+                    min-width: 300px;
+                    height: 50px;
+                    padding: 0 20px;
+                }
+                button {
+                    background: transparent none repeat scroll 0 0;
+                    border: medium none;
+                    box-shadow: inherit;
+                    color: #666666;
+                    height: 50px;
+                    position: absolute;
+                    right: 0;
+                    text-align: center;
+                    top: 0;
+                    width: 50px;
+                    z-index: 9;
+                }
+            }
+        }
+    }
+    .side-menu {
+        transition: all 0.3s ease-in-out;
+        padding: 0 50px 50px 50px;
+        width: 400px;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        z-index: 999;
+        background-color: $whiteColor;
+        height: 100%;
+        box-shadow: 0 15px 40px -5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        transform: translateX(400px);
+        h4 {
+            display: block;
+            font-weight: 800;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            padding-top: 50px;
+            position: relative;
+            text-transform: capitalize;
+            z-index: 1;
+            border-bottom: 1px dashed #dddddd;
+        }
+        .close-side {
+            position: absolute;
+            right: 10%;
+            top: 4%;
+            font-size: 25px;
+            color: #f44336;
+        }
+        .contact-info {
+            ul {
+                margin-top: 16px;
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    padding-bottom: 30px;
+                    &:last-child {
+                        padding: 0;
+                    }
+                    .info {
+                        margin-top: 5px;
+                        span {
+                            display: block;
+                            font-family: "Nunito", sans-serif;
+                            font-weight: 900;
+                            line-height: 20px;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            width: 100%;
+                            margin-bottom: 5px;
+                            color: #232323;
+                        }
+                    }
+                    .icon {
+                        font-size: 40px;
+                        color: $blueColor;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+        .widget {
+            ul {
+                margin-top: 16px;
+                li {
+                    display: block;
+                    font-family: "Nunito", sans-serif;
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                    a {
+                        color: #232323;
+                    }
+                }
+            }
+        }
+        .widget-social {
+            //social media icons
+            ul {
+                display: flex;
+                margin-top: 16px;
+                li {
+                    a {
+                        color: #ffffff;
+                        display: inline-block;
+                        font-weight: 600;
+                        height: 40px;
+                        line-height: 42px;
+                        margin-right: 5px;
+                        margin-top: 5px;
+                        padding: 0;
+                        text-align: center;
+                        width: 40px;
+                        border-radius: 5px;
+                        font-size: 13px;
+                    }
+                    &.facebook {
+                        a {
+                            background: #3b5998;
+                        }
+                    }
+                    &.twitter {
+                        a {
+                            background-color: #1da1f2;
+                        }
+                    }
+                    &.pinterest {
+                        a {
+                            background-color: #bd081c;
+                        }
+                    }
+                    &.dribbble {
+                        a {
+                            background-color: #ea4c89;
+                        }
+                    }
+                }
+            }
+        }
+        &.open {
+            transform: translateX(17px);
+        }
+    }
+}
+
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../img/preloader.gif) center no-repeat #ffffff;
+}

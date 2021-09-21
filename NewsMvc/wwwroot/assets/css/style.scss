@@ -1,0 +1,12 @@
+  //common
+  @import 'common/reset';
+  @import 'common/varibles';
+  
+  //sections
+@import 'sections/header';
+@import 'sections/footer';
+
+//pages
+@import 'pages/category';
+@import 'pages/home';
+@import 'pages/news-details';

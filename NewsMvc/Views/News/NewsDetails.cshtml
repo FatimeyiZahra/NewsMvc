@@ -1,0 +1,236 @@
+﻿@model NewsSingleViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<section id="news-details">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8 p-b-30">
+                <div class="details p-b-30">
+                    <h3 class="title">@Model.NewsDetails.Title</h3>
+                    <div class="added-by-date p-b-30">
+                        <span class="cl8">
+                            <a href="#" class="name trans-03">
+                                By, Sahra
+                            </a>
+                            <span class="f1-s-3 m-rl-3"> - </span>
+                            <span class="f1-s-3"> 22 Jan, 2020</span>
+                        </span>
+
+                    </div>
+                    <div class="news-pic">
+                        <span class="category">@Model.NewsDetails.Category.Name</span>
+                        <img src="assets/img/@Model.NewsDetails.Photo" alt="IMG">
+                    </div>
+                    @Html.Raw(Model.NewsDetails.Text)
+                </div>
+                <div class="share">
+                    <span>Share: </span>
+                    <ul class="social media">
+                        <li class="facebook">
+                            <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+                        </li>
+                        <li class="twitter">
+                            <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                        </li>
+                        <li class="google-plus">
+                            <a href="#"><i class="fab fa-google-plus-g"></i>Google+</a>
+                        </li>
+                        <li class="pinterest">
+                            <a href="#"><i class="fab fa-pinterest"></i>Pinterest</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- there is form for send ur comment -->
+                <div class="self-comment">
+                    <h4>5 Comments</h4>
+                    <div class="comment">
+                        <div class="image">
+                            <img src="assets/img/comment1.jpg" alt="">
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="comments" name="comments"
+                                                  placeholder="Leave A Comments"></textarea> </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row col-lg-12">
+                                    <button class="cancel-button" type="submit" name="submit" id="submit">
+                                        CANCEL
+                                    </button>
+                                    <button class="post-button" type="submit" name="submit" id="submit">
+                                        Post cOMMENT
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <!-- form finished -->
+                <!-- there are comment and reply -->
+                <div class="blog-comments">
+                    <div class="comment-list">
+                        <div class="comment">
+                            <!-- image's who wrote the comment -->
+                            <div class="image">
+                                <img src="assets/img/comment1.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <!-- him name information and date when he wrote this comment -->
+                                <div class="head">
+                                    <h5>Jonathom Doe</h5>
+                                    <span>28 Aug, 2020</span>
+                                </div>
+                                <!-- comment -->
+                                <p>
+                                    Delivered ye sportsmen zealously arranging frankness estimable as. Nay any
+                                    article enabled musical shyness yet sixteen yet blushes. Entire its the did
+                                    figure wonder off.
+                                </p>
+                                <!-- reply button -->
+                                <div class="reply">
+                                    <a href="#">
+                                        <i class="fa fa-reply"></i>REPLY
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- replied comment -->
+                        <div class="comment-reply">
+                            <!-- picture the man who replied a comment -->
+                            <div class="image">
+                                <img src="assets/img/comment2.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <!-- him name and date when he wrote this comment -->
+                                <div class="head">
+                                    <h5>
+                                        Spart Lee
+                                    </h5>
+                                    <span>17 Feb, 2020</span>
+                                </div>
+                                <!-- comment text -->
+                                <p>
+                                    Delivered ye sportsmen zealously arranging frankness estimable as. Nay any
+                                    article enabled musical shyness yet sixteen yet blushes. Entire its the did
+                                    figure wonder off.
+                                </p>
+                                <!-- reply button -->
+                                <div class="reply">
+                                    <a href="#">
+                                        <i class="fa fa-reply"></i>REPLY
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- comment pleace finished -->
+            </div>
+            <div class="col-md-10 col-lg-4">
+                <div class="relative-news-banner">
+                    <div class="banner">
+                        <a href="#">
+                            <img class="max-w-full" src="assets/img/banner-2.jpg" alt="IMG">
+                        </a>
+                    </div>
+                    <div class="most-shared">
+                        <div class="head  m-r-10">
+                            <h3 class="title">Most Shared News</h3>
+                        </div>
+                        <ul class="news">
+                            <li>
+                                <div class="news-image">
+                                    <img src="assets/img/economy-3.jpg" alt="Img">
+                                </div>
+                                <div class="title">
+                                    <a href="#" class="trans-03">
+                                        Zhang social media pop
+                                        also known when smart innocent...
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="news-image">
+                                    <img src="assets/img/technology-3.jpg" alt="Img">
+                                </div>
+                                <div class="title">
+                                    <a href="#" class="trans-03">
+                                        Venezuela elan govt
+                                        and opposit the property collect...
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="news-image">
+                                    <img src="assets/img/post-10.jpg" alt="Img">
+                                </div>
+                                <div class="title">
+                                    <a href="#" class="trans-03">
+                                        Zhang social media pop
+                                        also known when smart innocent...
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="news-image">
+                                    <img src="assets/img/economy-1.jpg" alt="Img">
+                                </div>
+                                <div class="title">
+                                    <a href="#" class="trans-03">
+                                        Venezuela elan govt
+                                        and opposit the property collect...
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="follow-us">
+                        <div class="head  m-r-10">
+                            <h3 class="title">Follow Us</h3>
+                        </div>
+                        <ul class="link">
+                            <li class="facebook">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="twitter">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="pinterest">
+                                <a href="#"><i class="fab fa-pinterest"></i></a>
+                            </li>
+                            <li class="dribbble">
+                                <a href="#">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </li>
+                            <li class="youtube">
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </li>
+                            <li class="instagram">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="banner2">
+                        <a href="#">
+                            <img class="max-w-full" src="assets/img/banner-1.png" alt="IMG">
+                        </a>
+                    </div>
+                    <!-- <div class="banner">
+                        <a href="#">
+                            <img class="max-w-full" src="assets/img/banner-2.jpg" alt="IMG">
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

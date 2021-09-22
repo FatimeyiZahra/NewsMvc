@@ -37,5 +37,22 @@ namespace NewsMvc.Controllers
             };
             return View(newsSingleViewModel);
         }
+
+
+        [Route("news-by-category")]
+        public IActionResult AllNewsByCategoryId(int Id)
+        {
+            if (!_context.Categories.Any(x => x.Id == Id))
+            {
+                return RedirectToAction("index", "error");
+            }
+            NewsViewModel newsViewModel = new NewsViewModel
+            {
+                Categories = _context.Categories.ToList(),
+                News = _context.News.Include(c => c.Category).Where(x => x.CategoryId == Id).ToList()
+            };
+            return View(newsViewModel);
+        }
+
     }
 }

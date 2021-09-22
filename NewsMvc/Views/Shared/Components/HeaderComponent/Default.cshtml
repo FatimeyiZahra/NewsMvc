@@ -1,0 +1,17 @@
+﻿@model List<Category>
+@{
+    Layout = null;
+}
+
+<ul class="navbar-nav">
+    @foreach (var cat in Model)
+    {
+        <li class="nav-item dropdown">
+            <a class="nav-link" asp-controller="news" asp-action="AllNewsByCategoryId" asp-route-Id="@cat.Id">
+                @cat.Name
+            </a>
+        </li>
+    }
+
+
+</ul>

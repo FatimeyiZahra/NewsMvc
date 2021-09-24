@@ -14,8 +14,8 @@ namespace NewsMvc.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasAnnotation("ProductVersion", "3.1.18")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("NewsMvc.Models.Category", b =>
@@ -69,13 +69,6 @@ namespace NewsMvc.Migrations
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("NewsMvc.Models.Category", b =>
-                {
-                    b.Navigation("News");
                 });
 #pragma warning restore 612, 618
         }

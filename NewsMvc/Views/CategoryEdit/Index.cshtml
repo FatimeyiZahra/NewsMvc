@@ -1,0 +1,38 @@
+﻿@model List<Category>
+<div class="container" style="padding-top:140px">
+    <a asp-controller="CategoryEdit" asp-action="Create">create</a>
+    <div class="row">
+        <div class="col-lg-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cat in Model)
+                    {
+                        <tr>
+                            <th scope="row">@cat.Id</th>
+                            <td>@cat.Name</td>
+                            <td>
+                                <button>
+                                    edit
+                                </button>
+                                <button>delete</button>
+                                <a asp-action="Details" asp-route-id="@cat.Id">details</a>
+                            </td>
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

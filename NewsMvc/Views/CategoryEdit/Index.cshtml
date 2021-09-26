@@ -18,10 +18,10 @@
                             <th scope="row">@cat.Id</th>
                             <td>@cat.Name</td>
                             <td>
-                                <button>
+                                <a asp-action="Edit" asp-route-id="@cat.Id">
                                     edit
-                                </button>
-                                <button>delete</button>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@cat.Id">delete</a>
                                 <a asp-action="Details" asp-route-id="@cat.Id">details</a>
                             </td>
                         </tr>

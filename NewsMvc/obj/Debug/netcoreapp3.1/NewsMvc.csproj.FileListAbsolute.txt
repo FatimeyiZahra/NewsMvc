@@ -163,3 +163,5 @@ C:\Users\MacBook AIr\Desktop\NewsMvc\NewsMvc\obj\Debug\netcoreapp3.1\Razor\Areas
 C:\Users\MacBook AIr\Desktop\NewsMvc\NewsMvc\obj\Debug\netcoreapp3.1\Razor\Views\CategoryEdit\Index.cshtml.g.cs
 C:\Users\MacBook AIr\Desktop\NewsMvc\NewsMvc\obj\Debug\netcoreapp3.1\Razor\Views\CategoryEdit\Create.cshtml.g.cs
 C:\Users\MacBook AIr\Desktop\NewsMvc\NewsMvc\obj\Debug\netcoreapp3.1\Razor\Views\CategoryEdit\Details.cshtml.g.cs
+C:\Users\MacBook AIr\Desktop\NewsMvc\NewsMvc\obj\Debug\netcoreapp3.1\Razor\Views\CategoryEdit\Edit.cshtml.g.cs
+C:\Users\MacBook AIr\Desktop\NewsMvc\NewsMvc\obj\Debug\netcoreapp3.1\Razor\Views\CategoryEdit\Delete.cshtml.g.cs

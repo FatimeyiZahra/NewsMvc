@@ -30,7 +30,8 @@ namespace NewsMvc.Controllers
                 LastNews=_context.News.Include(p => p.Category).OrderByDescending(n=>n.Id).ToList(),
                 AllNews=_context.News.Include("Category").OrderByDescending(n=>n.Id).ToList(),
             };
-
+            //System.Diagnostics.Debug.WriteLine(homeViewModel);
+            //Console.WriteLine("adas");
             return View(homeViewModel);
         }
     }
